@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 14:20:51 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/10 15:25:42 by anamedin         ###   ########.fr       */
+/*   Created: 2024/06/10 16:23:56 by anamedin          #+#    #+#             */
+/*   Updated: 2024/06/10 17:17:23 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/*
- *  atol, i need it to check eventual overflows
- *  converting every string into a long value
-*/
+
 static long	ft_atol(const char *str)
 {
 	long	num;

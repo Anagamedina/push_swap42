@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 12:44:54 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/11 12:49:07 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/11 13:46:14 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int main(int argc, char **argv)
     return (1);
   else if (2 == argc)
     argv = ft_split(argv[1], ' ');
-	stack_init(&a, argv )...
+	stack_init(&a, argv + 1);
+    
+
 
 
 }

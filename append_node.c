@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 17:06:12 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/11 17:19:53 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/12 17:22:02 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	append_node(t_stack_node **stack, int n)
 	if(!node)
 		return;
 	node->next = NULL;
-	node->nbr = n;
+	node ->nbr = n;
 
 	if(!(*stack))  //tiene un valor asi que pasara al else 
 	{

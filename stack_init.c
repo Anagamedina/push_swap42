@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:23:56 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/11 17:05:49 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/13 10:17:24 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,5 @@ void stack_init(t_stack_node **a, char **argv)
 
 	}
 }
+
+

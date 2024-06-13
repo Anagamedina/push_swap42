@@ -6,16 +6,18 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 09:07:04 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/13 10:18:49 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/13 19:02:30 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 void	error(t_stack_node **a, char **argv)
 {
 	exit(2);
 }
 
-int error_repeat(t_slack_node *a, int n)
+int error_repeat(t_stack_node *a, int n)
 {
 	if (NULL == a)
 		return (0);
@@ -47,3 +49,4 @@ int error_syntax(char *str_n)
 	return (0);
 
 }
+

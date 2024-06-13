@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:23:56 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/13 10:17:24 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/13 17:17:19 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,25 +44,23 @@ static long	ft_atol(const char *str)
 	return (num * isneg);
 }
 
-
-
-
-
 void stack_init(t_stack_node **a, char **argv)
 {
-	long	nbr;
+	long	n;
 	int		i;
 
 	i = 0;
 	while(argv[i])
 	{
 		if (error_syntax(argv[i]))
-			error_free(a,argv);
-		nbr = ft_atol(argv[i]);
-		if(nbr > INT_MAX || nbr < INT_MIN)
 			error_free(a, argv);
-
-
+		n = ft_atol(argv[i]);
+		if(n > INT_MAX || n < INT_MIN)
+			error_free(a, argv);
+		if(error_duplicate(*a, (int)n))
+			error_free(a, argv);
+		append_node(a(int)n);
+		++i;
 	}
 }
 

@@ -6,13 +6,15 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 21:01:10 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/15 21:01:23 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/16 00:05:56 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <push_swap.h>
 
 int main(int argc, char **argv)
+  //se usa para determinar la cantidad de elemnentos en la pila lo que influye
+  //en la eleccion del algoritmo de ordenamineto.
 {
   t_stack_node  *a;
   t_stack_node  *b;
@@ -26,7 +28,9 @@ int main(int argc, char **argv)
   else if (2 == argc)
     argv = ft_split(argv[1], ' ');
 	stack_init(&a, argv + 1, argc == 2);
-    if (!stack_sort(a)) // verificacion de la pila ya esta ordenada 
+    if (!stack_sort(a)) // significa que la condición se cumple si la pila a NO está ordenada.
+                        // true pila ordenada 
+                        // false pila desordenada 
     {
       if (stack_len(a) == 2)
         sa(&a);//si no esta ordenada se procede con el algoritmo de ordenamiento
@@ -39,5 +43,5 @@ int main(int argc, char **argv)
       else
         push_swap(&a, &b);// si la pila tiene mas de 3, usamos el algorith mas complejo para ordenar de MAYOR A MENOR 
     }
-    free_stack(&a);
+    free_stack(&a); //Liberar memoria u otras operaciones al finalizar el programa
 }

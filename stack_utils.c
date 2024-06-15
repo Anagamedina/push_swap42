@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:56:47 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/15 20:57:05 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/16 00:06:02 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 #include <stdio.h>
 
 //recorremos la pila nodo por nodo comparando cada nodo con el siguiente 
-bool stack_sorted(t_stack_node *stack)
+bool stack_sort(t_stack_node *stack)
 {
 	if (!stack)
 		return(1);// devuelve 1 ya que una pila vacia se considera ordenada 
-	while(stack->next) // mientras el nodo actual tenga un siguiente nodo 
+	while(stack->next) // comienza a recorrer la pila nodo por nodo mientras no sea NULL 
 	{
-		if(stack->value > stack->next->value) // comparamos el valor del nodo actual con el valor del siguiente nodo 
+		if(stack->value > stack->next->value) // comparamos el valor del nodo actual es mayor que el  siguiente nodo 
 			return(false); //si es mayor develve false (0) pila no ordenada 
 		stack = stack->next; //avanzar al siguiente nodo 
 	}

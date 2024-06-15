@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 17:06:12 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/13 17:19:18 by anamedin         ###   ########.fr       */
+/*   Created: 2024/06/15 20:58:15 by anamedin          #+#    #+#             */
+/*   Updated: 2024/06/15 20:59:05 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ static void	append_node(t_stack_node **stack, int n)
 	t_stack_node	*last_node;
 
 	if (!stack)
-		return(NULL);
+		return;
 	node = malloc(sizeof(t_stack_node));
 	if(!node)
 		return;
 	node->next = NULL;
-	node ->nbr = n;
+	node->value = n;
 
 	if(!(*stack))  //tiene un valor asi que pasara al else 
 	{

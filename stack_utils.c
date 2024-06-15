@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 18:00:40 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/15 20:30:57 by anamedin         ###   ########.fr       */
+/*   Created: 2024/06/15 20:56:47 by anamedin          #+#    #+#             */
+/*   Updated: 2024/06/15 20:57:05 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,4 +98,3 @@ t_stack_node  *find_max(t_stack_node *stack)
 	}
 	return(max_node);
 }
-

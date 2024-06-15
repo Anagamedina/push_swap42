@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 16:23:56 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/13 17:17:19 by anamedin         ###   ########.fr       */
+/*   Created: 2024/06/15 21:02:13 by anamedin          #+#    #+#             */
+/*   Updated: 2024/06/15 21:02:24 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,3 @@ void stack_init(t_stack_node **a, char **argv)
 		++i;
 	}
 }
-
-

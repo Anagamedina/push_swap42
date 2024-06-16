@@ -6,35 +6,40 @@
 #    By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/10 09:54:05 by anamedin          #+#    #+#              #
-#    Updated: 2024/06/10 10:24:52 by anamedin         ###   ########.fr        #
+#    Updated: 2024/06/16 18:55:05 by anamedin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# Variables
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g -02
+CFLAGS = -Wall -Wextra -Werror -g -O2
 RM = rm -rf
-ARC =  ar -rcs
+ARC = ar -rcs
 
+# Archivos
 NAME = push_swap.a
 HEADER = push_swap.h
 
+# Encontrar todos los archivos .c y generar los archivos .o correspondientes
 SRCS = $(wildcard *.c)
-OBJS = $(SRCS: .c=.o)
+OBJS = $(SRCS:.c=.o)
 
-all : $(NAME)
+# Reglas
+all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME): $(OBJS)
 	$(ARC) $(NAME) $(OBJS)
 
-%.o : %.c $(HEADER) Makefile
+%.o: %.c $(HEADER) Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean :
+clean:
 	$(RM) $(OBJS)
 
-fclean : clean 
+fclean: clean
 	$(RM) $(NAME)
 
-re : fclean all 
+re: fclean all
 
-.PHONY : all, clean, fclean, re
+.PHONY: all clean fclean re
+

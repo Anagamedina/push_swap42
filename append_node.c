@@ -6,13 +6,13 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:58:15 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/15 20:59:05 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/16 19:02:17 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	append_node(t_stack_node **stack, int n)
+void	append_node(t_stack_node **stack, int n)
 {
 	t_stack_node	*node;
 	t_stack_node	*last_node;

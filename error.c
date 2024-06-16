@@ -1,31 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errror.c                                           :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/15 21:00:36 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/15 21:00:47 by anamedin         ###   ########.fr       */
+/*   Created: 2024/06/16 19:05:27 by anamedin          #+#    #+#             */
+/*   Updated: 2024/06/16 19:16:34 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "push_swap.h"
 
-void	error(t_stack_node **a, char **argv)
+void	free_stack(t_stack_node **stack)
 {
-	exit(2);
+	t_stack_node	*tmp;
+	t_stack_node	*current;
+
+	if (NULL == stack)
+		return ;
+	current = *stack;
+	while (current)
+	{
+		tmp = current->next;
+		free(current);
+		current = tmp;
+	}
+	*stack = NULL;
 }
 
-int error_repeat(t_stack_node *a, int n)
+/*void	error_free(t_stack_node **a, char **argv)
 {
-	if (NULL == a)
+	free_stack(a);
+	write(2, "Error\n", 6);
+	exit(1);
+}*/
+
+
+int error_repeat(t_stack_node *stack, int n)
+{
+	if (NULL == stack)
 		return (0);
-	while (a)
+	while (stack)
 	{
-		if (a->value == n)
+		if (stack->value == n)
 			return (1);
-		a = a->next; 
+		stack = stack->next; 
 	}
 	return (0);
 }

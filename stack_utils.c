@@ -6,17 +6,16 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:56:47 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/16 00:06:02 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/16 19:01:25 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <limits.h>
-#include <stdbool.h>
 #include <stdio.h>
 
 //recorremos la pila nodo por nodo comparando cada nodo con el siguiente 
-bool stack_sort(t_stack_node *stack)
+int  stack_sort(t_stack_node *stack)
 {
 	if (!stack)
 		return(1);// devuelve 1 ya que una pila vacia se considera ordenada 

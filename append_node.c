@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:58:15 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/16 19:02:17 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/17 23:01:46 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	append_node(t_stack_node **stack, int n)
 	}
 	else
 	{
-		last_node = find_last(*stack);
+		last_node = find_last_node(*stack);
 		last_node->next = node;
 		node->prev = last_node;
 	}

@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:27:18 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/16 19:14:02 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/17 23:01:29 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+
 typedef struct s_stack_node
 {
   int					value;
@@ -30,28 +31,41 @@ typedef struct s_stack_node
   struct s_stack_node	*next;
 }				t_stack_node;
 
+//*** Handle input ./push_swap "1 -42 1337" ***
+char			**ft_split(char *str, char separator);
 
-// Funciones para operaciones básicas de pila
-void append_node(t_stack_node **stack, int n);
-t_stack_node *find_last(t_stack_node *stack);
-t_stack_node *find_min(t_stack_node *stack);
-t_stack_node *find_max(t_stack_node *stack);
-void free_stack(t_stack_node **stack);
-int stack_sort(t_stack_node *stack);
-int stack_len(t_stack_node *stack);
+//*** Handle errors-free ***
+void			free_matrix(char **argv);
+void			error_free(t_stack_node **a, char **argv);
+int             error_repeat(t_stack_node *stack, int n);
+void			free_stack(t_stack_node **stack);
+int				error_syntax(char *str_nbr);
 
-// Funciones específicas para el algoritmo Push Swap
-//
-//
-//
-//  Funciones de manejo de errores
-void	error(t_stack_node **stack, char **argv);
-int error_repeat(t_stack_node *stack, int n);
-int error_syntax(char *str_n);
-void	free_stack(t_stack_node **stack);
+//*** Stack creation ***
+void			stack_init(t_stack_node **a, char **argv);
 
-// Funciones auxiliares
-long ft_atol(const char *str);
-void stack_init(t_stack_node **a, char **argv);
+//*** linked list utils ***
+void			append_node(t_stack_node **stack, int n);
+t_stack_node	*find_last_node(t_stack_node *head);
+t_stack_node	*find_max(t_stack_node *stack);
+t_stack_node	*find_min(t_stack_node *stack);
+int			stack_sort(t_stack_node *stack);
+int				stack_len(t_stack_node *stack);
 
+//*** Algorithms ***
+//void			tiny_sort(t_stack_node **a);
+//void			push_swap(t_stack_node **a, t_stack_node **b);
+
+//*** Commands ***
+void			sa(t_stack_node **a);
+void			sb(t_stack_node **b,);
+void			ss(t_stack_node **a, t_stack_node **b);
+void			ra(t_stack_node **a);
+void			rb(t_stack_node **b);
+void			rr(t_stack_node **a, t_stack_node **b);
+void			rra(t_stack_node **a);
+void			rrb(t_stack_node **b);
+void			rrr(t_stack_node **a, t_stack_node **b);
+void			pa(t_stack_node **a, t_stack_node **b);
+void			pb(t_stack_node **b, t_stack_node **a);
 #endif

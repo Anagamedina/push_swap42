@@ -6,14 +6,14 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:02:31 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/17 22:59:23 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/17 23:35:29 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
 static void rotate(t_stack_node**stack)
 {
-	t_stack_node	last_node;
+	t_stack_node	*last_node;
 
 	if (stack == NULL || (*stack) == NULL || (*stack) == NULL)
 		return;

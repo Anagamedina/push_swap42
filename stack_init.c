@@ -6,15 +6,12 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 21:02:13 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/15 21:02:24 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/17 23:42:43 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <limits.h>
-#include <stdlib.h>
-#include <stdio.h>
-
 
 static long	ft_atol(const char *str)
 {
@@ -57,9 +54,9 @@ void stack_init(t_stack_node **a, char **argv)
 		n = ft_atol(argv[i]);
 		if(n > INT_MAX || n < INT_MIN)
 			error_free(a, argv);
-		if(error_duplicate(*a, (int)n))
+		if(error_repeat(*a, (int)n))
 			error_free(a, argv);
-		append_node(a(int)n);
+		append_node(a, (int)n);
 		++i;
 	}
 }

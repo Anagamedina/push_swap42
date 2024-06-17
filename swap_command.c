@@ -6,13 +6,13 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:16:15 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/17 17:46:58 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/17 23:48:14 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void swap(t_stack_node **head)
+/*static void swap(t_stack_node **head)
 {
 	if(*head == NULL || head == NULL)
 		return;
@@ -23,4 +23,4 @@ static void swap(t_stack_node **head)
 			(*head)->next->prev = (*head)->prev;
 	(*head)->next = (*head)->prev;
 	(*head)->prev = NULL;
-}
+}*/

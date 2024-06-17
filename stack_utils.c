@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:56:47 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/16 19:01:25 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/17 23:47:11 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 int  stack_sort(t_stack_node *stack)
 {
 	if (!stack)
-		return(1);// devuelve 1 ya que una pila vacia se considera ordenada 
+		return(TRUE);// devuelve 1 ya que una pila vacia se considera ordenada 
 	while(stack->next) // comienza a recorrer la pila nodo por nodo mientras no sea NULL 
 	{
 		if(stack->value > stack->next->value) // comparamos el valor del nodo actual es mayor que el  siguiente nodo 
-			return(false); //si es mayor develve false (0) pila no ordenada 
+			return(FALSE); //si es mayor develve false (0) pila no ordenada 
 		stack = stack->next; //avanzar al siguiente nodo 
 	}
-	return (true);// la pila esta ordenada (1)
+	return (TRUE);// la pila esta ordenada (1)
 }
 
 int stack_len(t_stack_node *stack) // recibe un puntero stack que paunta al primer nodo de la pila 
@@ -44,7 +44,7 @@ int stack_len(t_stack_node *stack) // recibe un puntero stack que paunta al prim
 	return(count);// retorna la longiud el numero de nodos en la pila 
 }
 
-t_stack_node *find_last(t_stack_node *stack)
+t_stack_node *find_last_node(t_stack_node *stack)
 	// recibe un punero stack que apunta al primer nodo de la pila y devuelve
 	// un puntero al ultimo nodo de la pila 
 {

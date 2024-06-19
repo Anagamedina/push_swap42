@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:27:18 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/19 19:58:22 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/19 21:55:50 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_stack_node
   int					current_position;
   int					final_index;
   int					push_price;
+  int                   above_median;
   struct s_stack_node	*target_node;
   struct s_stack_node	*prev;
   struct s_stack_node	*next;

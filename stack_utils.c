@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 20:56:47 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/17 23:47:11 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/19 19:28:52 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ t_stack_node *find_last_node(t_stack_node *stack)
 	return (stack);//cuando stack->next es nulo el bucle termina y se devuelve el puntero al ultimo nodo 
 }
 
-t_stack_node	*find_min(t_stack_node *stack)
+t_stack_node	*find_value_min(t_stack_node *stack)
 {
 	long			min;// para almacenar el valor minimo encontrado 
 	t_stack_node	*min_node;// para almacenar el puntero al nodo con el valor minimo 
@@ -78,7 +78,7 @@ t_stack_node	*find_min(t_stack_node *stack)
 					  // que contiene el valor minimo de la pila 
 }
 
-t_stack_node  *find_max(t_stack_node *stack)
+t_stack_node  *find_value_max(t_stack_node *stack)
 {
 	long				max;
 	t_stack_node		*max_node;

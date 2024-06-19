@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 19:05:27 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/18 00:23:19 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/19 16:53:43 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void	free_stack(t_stack_node **stack)
 	}
 	*stack = NULL;
 }
-//TODO: error con argv
+
 void	error_free(t_stack_node **a, char **argv)
 {
 	free_stack(a);
-	free_stack(argv);
+	free_matrix(argv);
 	write(2, "Error\n", 6);
 	exit(1);
 }

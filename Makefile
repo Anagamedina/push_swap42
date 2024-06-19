@@ -6,15 +6,14 @@
 #    By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/10 09:54:05 by anamedin          #+#    #+#              #
-#    Updated: 2024/06/18 00:09:38 by anamedin         ###   ########.fr        #
+#    Updated: 2024/06/18 00:18:58 by anamedin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Variables
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
-
 
 # Archivos
 NAME = push_swap
@@ -31,13 +30,13 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.c $(HEADER) Makefile
-	$(CC) $(CFLAGS) -C $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(RM) $(OBJS) $(NAME)
+	$(RM) $(NAME)
 
 re: all
 

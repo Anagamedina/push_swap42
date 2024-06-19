@@ -6,10 +6,9 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 19:05:27 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/16 19:16:34 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/18 00:23:19 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -29,14 +28,14 @@ void	free_stack(t_stack_node **stack)
 	}
 	*stack = NULL;
 }
-
-/*void	error_free(t_stack_node **a, char **argv)
+//TODO: error con argv
+void	error_free(t_stack_node **a, char **argv)
 {
 	free_stack(a);
+	free_stack(argv);
 	write(2, "Error\n", 6);
 	exit(1);
-}*/
-
+}
 
 int error_repeat(t_stack_node *stack, int n)
 {

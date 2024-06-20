@@ -6,24 +6,31 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 21:14:17 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/19 21:52:16 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/20 00:54:52 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <limits.h>
 
+
+/*asigna a cada nodo en la pila (b) un "nodo objetivo" en la pila (a), este
+ * nodo objetivo es el elugar en (a) donde el nodo de (b) debeeria ser
+ * insertado para mantener (a) ordenada */
+
+
 static void set_target_node(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_a;
-	t_stack_node	*target_node;
-	long			best_index;
+	t_stack_node	*target_node;// el nodo de "a" donde el nodo de "b" deberia ser insertado
+	long			best_index;// guarda temporal el valor del nodo de "a" que es el mejor candidato
+							   // como "nodo objetivo" para el nodo de "b"
 
-	while (b)
+	while (b) // empieza iterando sobre cada nodo en la pila "b"
 	{
-		best_index = LONG_MAX;
+		best_index = LONG_MAX;// para asegurar que cualquier valor valido en (a) sera menor
 		current_a = a;
-		while (current_a)
+		while (current_a) //iteramos sobre cada nodo en a 
 		{
 			if (current_a->value > b->value
 				&& current_a->value < best_index)

@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:27:18 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/19 21:55:50 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/20 02:00:16 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int			stack_sort(t_stack_node *stack);
 int				stack_len(t_stack_node *stack);
 
 //*** Algorithms ***
-/void			tiny_sort(t_stack_node **a);
+void			tiny_sort(t_stack_node **a);
 //void			push_swap(t_stack_node **a, t_stack_node **b);
 
 //*** Commands ***

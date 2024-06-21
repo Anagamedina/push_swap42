@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 21:01:10 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/19 16:44:53 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/21 19:38:29 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
-	//t_stack_node	*b;
+	t_stack_node	*b;
 
 	a = NULL;
-	//b = NULL;
+	b = NULL;
 	if (1 == argc || (2 == argc && !argv[1][0]))
 		return (1);
 	else if (2 == argc)
@@ -29,6 +29,10 @@ int	main(int argc, char **argv)
 	{
 		if (stack_len(a) == 2)
 			sa(&a);
+		else if (stack_len(a) == 3)
+			tiny_sort(&a);
+		else
+			push_swap(&a, &b);
 	}
 	
 	free_stack(&a);

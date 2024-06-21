@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:27:18 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/20 02:00:16 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/21 20:29:31 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_stack_node
   struct s_stack_node	*next;
 }				t_stack_node;
 
-//*** Handle input ./push_swap "1 -42 1337" ***
+//*** Handle input ./push_swap ***
 char			**ft_split(char *str, char separator);
 
 //*** Handle errors-free ***
@@ -54,6 +54,8 @@ t_stack_node	*find_value_max(t_stack_node *stack);
 t_stack_node	*find_value_min(t_stack_node *stack);
 int			stack_sort(t_stack_node *stack);
 int				stack_len(t_stack_node *stack);
+void  	        set_current_position(t_stack_node *stack);
+
 
 //*** Algorithms ***
 void			tiny_sort(t_stack_node **a);

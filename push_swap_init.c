@@ -6,7 +6,7 @@
 /*   By: anamedin <anamedin@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 21:14:17 by anamedin          #+#    #+#             */
-/*   Updated: 2024/06/20 00:54:52 by anamedin         ###   ########.fr       */
+/*   Updated: 2024/06/21 14:33:52 by anamedin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,26 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 		else
 		b->push_price += len_a - (b->target_node->current_position);
 		b = b->next;		
+	}
+}
+
+void	set_current_position(t_stack_node *stack)
+{
+	int	i;
+	int	centerline;
+
+	i = 0;
+	if (stack == NULL)
+		return;
+	centerline = stack_len(stack)/ 2;
+	while (stack)
+	{
+		stack->current_position = i;
+		if (i<= centerline)
+			stack->above_median = TRUE;
+		else
+			stack->above_median = FALSE;
+		stack = stack->next;
+		++i;
 	}
 }
